@@ -30,7 +30,7 @@ curl -sS -F "file=@parrot.png" http://localhost:8080/images
 curl -v "http://localhost:8080/images/<ID>.png?gray=1" -o gray.png
 ```
 
-
+## Description
 
 - Health: `GET /healthz`
 - Upload raw (octet-stream):
