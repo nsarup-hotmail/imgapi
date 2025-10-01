@@ -19,9 +19,6 @@ A minimal image storage and processing microservice in Go. It supports upload an
 IMGAPI_ADDR=:8080 IMGAPI_DATA_DIR=./data go run ./cmd/imgapi
 ```
 
-- Health: `GET /healthz`
-- Upload raw (octet-stream):
-
 ## Quick Test
 1. Store a file in repo
 ```bash
@@ -33,7 +30,11 @@ curl -sS -F "file=@parrot.png" http://localhost:8080/images
 curl -v "http://localhost:8080/images/<ID>.png?gray=1" -o gray.png
 ```
 
-## Other commands
+
+
+- Health: `GET /healthz`
+- Upload raw (octet-stream):
+
 ```bash
 curl -sS -X POST \
   -H 'Content-Type: application/octet-stream' \
